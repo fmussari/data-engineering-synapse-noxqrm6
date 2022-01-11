@@ -1,0 +1,17 @@
+{
+	"name": "LAB_06 - Probando luego del Dataflow",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://asadatalakenoxqrm6.dfs.core.windows.net/wwi-02/top-products/**',\n        FORMAT = 'PARQUET'\n    ) AS [result]\n\nWHERE userId is NULL\n\n\n-- This is auto-generated code\nSELECT\n    COUNT (*)\nFROM\n    OPENROWSET(\n        BULK 'https://asadatalakenoxqrm6.dfs.core.windows.net/wwi-02/top-products/',\n        FORMAT = 'DELTA'\n    ) AS [result]\n\nWHERE userId is NULL\n\n-- Devuelve 336,893 Nulos!!",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

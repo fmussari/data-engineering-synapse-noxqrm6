@@ -1,0 +1,18 @@
+{
+	"name": "Exercise - Manage authorization through column and row level security",
+	"properties": {
+		"description": "https://docs.microsoft.com/en-us/learn/modules/secure-data-warehouse-azure-synapse-analytics/6-exercise-manage-authorization-through-column-row-level-security",
+		"content": {
+			"query": "\n\n-- Create Membership table with SSN column used to store social security numbers:\n\nCREATE TABLE Membership\n  (MemberID int IDENTITY,\n   FirstName varchar(100) NULL,\n   SSN char(9) NOT NULL,\n   LastName varchar(100) NOT NULL,\n   Phone varchar(12) NULL,\n   Email varchar(100) NULL);\n\n\n-- \n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

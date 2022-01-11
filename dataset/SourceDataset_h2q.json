@@ -1,0 +1,20 @@
+{
+	"name": "SourceDataset_h2q",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "asadatalakenoxqrm6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "online-user-profiles-01",
+				"fileSystem": "wwi-02"
+			}
+		},
+		"schema": {}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

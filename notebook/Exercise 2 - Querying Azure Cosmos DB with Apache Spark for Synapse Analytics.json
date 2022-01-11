@@ -1,0 +1,3021 @@
+{
+	"name": "Exercise 2 - Querying Azure Cosmos DB with Apache Spark for Synapse Analytics",
+	"properties": {
+		"description": "https://github.com/MicrosoftLearning/DP-203-Data-Engineer/blob/master/Instructions/Labs/LAB_09_htap_with_azure_synapse_link.md#exercise-2---querying-azure-cosmos-db-with-apache-spark-for-synapse-analytics",
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SparkPool01",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "27c07790-b3f1-4c9b-acd8-6f8384014279"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"a1c58088-fa88-49c2-a8f8-2513bb22e88c": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "oFlHAOR7enoBAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "7836",
+										"3": "8170ac99-2fdf-40eb-a23d-285dbc6ce781",
+										"4": [
+											2397,
+											375,
+											3692,
+											174,
+											3984,
+											2319,
+											1269,
+											3577
+										],
+										"5": [
+											{
+												"productId": 1575,
+												"reviewText": "I tried to nail it but got strawberry all over it.",
+												"reviewDate": "2017-09-30T03:17:19.0098342+00:00"
+											},
+											{
+												"productId": 4961,
+												"reviewText": "My chicken loves to play with it.",
+												"reviewDate": "2016-10-27T12:04:12.7230765+00:00"
+											},
+											{
+												"productId": 2104,
+												"reviewText": "My co-worker Knute has one of these. He says it looks smoky.",
+												"reviewDate": "2016-06-18T06:11:16.6395851+00:00"
+											},
+											{
+												"productId": 532,
+												"reviewText": "My co-worker Ali has one of these. He says it looks towering.",
+												"reviewDate": "2017-05-26T08:40:15.446633+00:00"
+											},
+											{
+												"productId": 2887,
+												"reviewText": "The box this comes in is 3 inch by 6 centimeter and weights 15 ounce!",
+												"reviewDate": "2018-02-05T03:12:22.0090741+00:00"
+											}
+										],
+										"6": "75085929-f580-4370-a947-eb1f01e5879c",
+										"7": "\"0500e2bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoCAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6235",
+										"3": "6747d80f-fbbe-4182-a2c2-db9fdb5a27ea",
+										"4": [
+											3488,
+											2210,
+											97,
+											2023,
+											3871,
+											4307,
+											403
+										],
+										"5": [
+											{
+												"productId": 1262,
+												"reviewText": "i use it barely when i'm in my store.",
+												"reviewDate": "2017-11-28T21:06:15.786599+00:00"
+											},
+											{
+												"productId": 1398,
+												"reviewText": "I saw one of these in Macau and I bought one.",
+												"reviewDate": "2019-03-31T14:23:29.9333121+00:00"
+											},
+											{
+												"productId": 2900,
+												"reviewText": "My neighbor Fannie has one of these. She works as a teacher and she says it looks spiky.",
+												"reviewDate": "2017-09-01T23:15:42.9252417+00:00"
+											},
+											{
+												"productId": 3603,
+												"reviewText": "My co-worker Fate has one of these. He says it looks tall.",
+												"reviewDate": "2017-02-04T18:33:28.0188338+00:00"
+											},
+											{
+												"productId": 403,
+												"reviewText": "My macaroni penguin loves to play with it.",
+												"reviewDate": "2017-06-05T06:20:55.3502681+00:00"
+											}
+										],
+										"6": "be5ef3cc-a6cc-40ac-8bcf-4d56c0b6953f",
+										"7": "\"0500e3bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoDAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "5226",
+										"3": "63103294-99c1-4978-9c75-343d47e08d46",
+										"4": [
+											3572,
+											1214,
+											3029,
+											1256,
+											369,
+											214
+										],
+										"5": [
+											{
+												"productId": 4442,
+												"reviewText": "This Strategist works very well. It persistently improves my soccer by a lot.",
+												"reviewDate": "2018-09-17T10:16:21.2957287+00:00"
+											},
+											{
+												"productId": 4076,
+												"reviewText": "My neighbor Ardeth has one of these. She works as a gasman and she says it looks fuzzy.",
+												"reviewDate": "2019-06-05T21:32:38.0207446+00:00"
+											},
+											{
+												"productId": 718,
+												"reviewText": "heard about this on powerviolence radio, decided to give it a try.",
+												"reviewDate": "2020-05-03T16:04:49.3059408+00:00"
+											},
+											{
+												"productId": 3342,
+												"reviewText": "this wireless is flirty.",
+												"reviewDate": "2017-06-10T08:28:46.1279408+00:00"
+											},
+											{
+												"productId": 3561,
+												"reviewText": "i use it centenially when i'm in my greenhouse.",
+												"reviewDate": "2017-06-19T06:31:45.3118955+00:00"
+											}
+										],
+										"6": "8fd01553-9603-44bd-a0f7-027a92de870b",
+										"7": "\"0500e4bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoEAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "5094",
+										"3": "95446718-596a-464e-9b1e-3107fe2b4a8f",
+										"4": [
+											3151,
+											6,
+											4576,
+											2304,
+											1874,
+											806,
+											1016,
+											2432,
+											3514
+										],
+										"5": [
+											{
+												"productId": 1823,
+												"reviewText": "The box this comes in is 5 kilometer by 6 yard and weights 18 gram.",
+												"reviewDate": "2018-04-07T19:55:51.280869+00:00"
+											},
+											{
+												"productId": 3957,
+												"reviewText": "this Realigned is vertical.",
+												"reviewDate": "2018-09-10T22:45:22.3874737+00:00"
+											},
+											{
+												"productId": 91,
+												"reviewText": "My co-worker Luka has one of these. He says it looks purple.",
+												"reviewDate": "2017-03-29T10:37:49.4732004+00:00"
+											},
+											{
+												"productId": 4020,
+												"reviewText": "My scarab beetle loves to play with it.",
+												"reviewDate": "2019-10-05T09:27:30.8206863+00:00"
+											},
+											{
+												"productId": 2372,
+												"reviewText": "I tried to scratch it but got cheeseburger all over it.",
+												"reviewDate": "2020-04-22T20:41:07.6828762+00:00"
+											}
+										],
+										"6": "6e514e19-2419-489a-badc-f9338743e37b",
+										"7": "\"0500e5bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoFAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "8841",
+										"3": "51f74874-a367-4439-9b10-ae8eaa3a5528",
+										"4": [],
+										"5": [
+											{
+												"productId": 3805,
+												"reviewText": "this Ohio is vertical.",
+												"reviewDate": "2017-10-10T07:07:19.957179+00:00"
+											},
+											{
+												"productId": 3674,
+												"reviewText": "heard about this on smooth jazz radio, decided to give it a try.",
+												"reviewDate": "2019-07-20T23:16:31.6438517+00:00"
+											},
+											{
+												"productId": 2824,
+												"reviewText": "i use it never again when i'm in my station.",
+												"reviewDate": "2019-07-12T22:57:45.1479329+00:00"
+											},
+											{
+												"productId": 1388,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-10-17T04:12:30.5491101+00:00"
+											}
+										],
+										"6": "dbb67131-34c6-404e-8cc3-389d62b54ace",
+										"7": "\"0500e6bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoGAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "2776",
+										"3": "114fbf94-5c94-4189-96f7-5282843dd5f4",
+										"4": [
+											1424,
+											2906,
+											3665,
+											366,
+											3597,
+											2604
+										],
+										"5": [
+											{
+												"productId": 2006,
+												"reviewText": "I tried to kidnap it but got apricot all over it.",
+												"reviewDate": "2017-01-26T03:54:37.0079501+00:00"
+											}
+										],
+										"6": "0c58609c-d043-4642-be0b-886564838f7d",
+										"7": "\"0500e7bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoHAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "3747",
+										"3": "e826ce1b-aa26-4208-abe0-e3b8c53a423e",
+										"4": [
+											399,
+											879,
+											1152,
+											2072,
+											4498,
+											1712,
+											3816,
+											2985
+										],
+										"5": [
+											{
+												"productId": 2369,
+												"reviewText": "My neighbor Julisa has one of these. She works as a bartender and she says it looks crooked.",
+												"reviewDate": "2019-05-04T03:42:17.2949506+00:00"
+											},
+											{
+												"productId": 3227,
+												"reviewText": "I saw this on TV and wanted to give it a try.",
+												"reviewDate": "2018-07-09T18:13:38.3011634+00:00"
+											}
+										],
+										"6": "392adaa0-f324-4036-8a11-03d83035b8c2",
+										"7": "\"0500e8bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoIAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6596",
+										"3": "234cc89a-b337-4f6c-8bc3-5f80cb84250a",
+										"4": [
+											2729,
+											293,
+											1916,
+											81,
+											4859,
+											876,
+											3553,
+											2090,
+											4982
+										],
+										"5": [
+											{
+												"productId": 1798,
+												"reviewText": "This USB works considerably well. It recklessly improves my basketball by a lot.",
+												"reviewDate": "2017-10-25T17:36:49.7018938+00:00"
+											},
+											{
+												"productId": 679,
+												"reviewText": "talk about hatred.",
+												"reviewDate": "2016-12-06T02:45:06.9725751+00:00"
+											},
+											{
+												"productId": 50,
+												"reviewText": "My co-worker Erick has one of these. He says it looks fluffy.",
+												"reviewDate": "2017-12-28T02:41:33.6282907+00:00"
+											},
+											{
+												"productId": 2060,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-08-07T08:40:52.7941546+00:00"
+											},
+											{
+												"productId": 4330,
+												"reviewText": "I tried to strangle it but got hazelnut all over it.",
+												"reviewDate": "2016-11-13T20:02:27.8396822+00:00"
+											}
+										],
+										"6": "e296e96b-48fe-415f-977c-512ab9210249",
+										"7": "\"0500e9bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoJAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "915",
+										"3": "f8fa1a75-4b95-450b-9ba4-6f392daea0f8",
+										"4": [
+											3672,
+											2883,
+											451,
+											1695,
+											4689,
+											2139,
+											1109
+										],
+										"5": [],
+										"6": "d10b4de2-4392-408f-b9ae-6e48456e53f5",
+										"7": "\"0500eabc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoLAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6178",
+										"3": "bd408eb5-1b51-4cc1-a3c1-fe31413e7680",
+										"4": [
+											3733,
+											1272,
+											1966,
+											1881
+										],
+										"5": [
+											{
+												"productId": 2240,
+												"reviewText": "I saw one of these in Kazakhstan and I bought one.",
+												"reviewDate": "2016-06-09T16:34:32.477325+00:00"
+											}
+										],
+										"6": "633a84fd-7ee1-4d29-a0d2-4129a4f87a5d",
+										"7": "\"0500ecbc-0000-0100-0000-61d770380000\""
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "_rid",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "_ts",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "3",
+										"name": "cartId",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "preferredProducts",
+										"type": "ArrayType(LongType,true)"
+									},
+									{
+										"key": "5",
+										"name": "productReviews",
+										"type": "ArrayType(StructType(StructField(productId,LongType,true), StructField(reviewText,StringType,true), StructField(reviewDate,StringType,true)),true)"
+									},
+									{
+										"key": "6",
+										"name": "id",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "_etag",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"7384f5ca-52d9-4636-be50-c5c9b15684ad": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "attachments/",
+										"1": "\"0500e2bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoBAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoBAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "8170ac99-2fdf-40eb-a23d-285dbc6ce781",
+										"6": "75085929-f580-4370-a947-eb1f01e5879c",
+										"7": [
+											2397,
+											375,
+											3692,
+											174,
+											3984,
+											2319,
+											1269,
+											3577
+										],
+										"8": [
+											{
+												"productId": 1575,
+												"reviewDate": "2017-09-30T03:17:19.0098342+00:00",
+												"reviewText": "I tried to nail it but got strawberry all over it."
+											},
+											{
+												"productId": 4961,
+												"reviewDate": "2016-10-27T12:04:12.7230765+00:00",
+												"reviewText": "My chicken loves to play with it."
+											},
+											{
+												"productId": 2104,
+												"reviewDate": "2016-06-18T06:11:16.6395851+00:00",
+												"reviewText": "My co-worker Knute has one of these. He says it looks smoky."
+											},
+											{
+												"productId": 532,
+												"reviewDate": "2017-05-26T08:40:15.446633+00:00",
+												"reviewText": "My co-worker Ali has one of these. He says it looks towering."
+											},
+											{
+												"productId": 2887,
+												"reviewDate": "2018-02-05T03:12:22.0090741+00:00",
+												"reviewText": "The box this comes in is 3 inch by 6 centimeter and weights 15 ounce!"
+											}
+										],
+										"9": "7836"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e3bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoCAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoCAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "6747d80f-fbbe-4182-a2c2-db9fdb5a27ea",
+										"6": "be5ef3cc-a6cc-40ac-8bcf-4d56c0b6953f",
+										"7": [
+											3488,
+											2210,
+											97,
+											2023,
+											3871,
+											4307,
+											403
+										],
+										"8": [
+											{
+												"productId": 1262,
+												"reviewDate": "2017-11-28T21:06:15.786599+00:00",
+												"reviewText": "i use it barely when i'm in my store."
+											},
+											{
+												"productId": 1398,
+												"reviewDate": "2019-03-31T14:23:29.9333121+00:00",
+												"reviewText": "I saw one of these in Macau and I bought one."
+											},
+											{
+												"productId": 2900,
+												"reviewDate": "2017-09-01T23:15:42.9252417+00:00",
+												"reviewText": "My neighbor Fannie has one of these. She works as a teacher and she says it looks spiky."
+											},
+											{
+												"productId": 3603,
+												"reviewDate": "2017-02-04T18:33:28.0188338+00:00",
+												"reviewText": "My co-worker Fate has one of these. He says it looks tall."
+											},
+											{
+												"productId": 403,
+												"reviewDate": "2017-06-05T06:20:55.3502681+00:00",
+												"reviewText": "My macaroni penguin loves to play with it."
+											}
+										],
+										"9": "6235"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e4bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoDAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoDAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "63103294-99c1-4978-9c75-343d47e08d46",
+										"6": "8fd01553-9603-44bd-a0f7-027a92de870b",
+										"7": [
+											3572,
+											1214,
+											3029,
+											1256,
+											369,
+											214
+										],
+										"8": [
+											{
+												"productId": 4442,
+												"reviewDate": "2018-09-17T10:16:21.2957287+00:00",
+												"reviewText": "This Strategist works very well. It persistently improves my soccer by a lot."
+											},
+											{
+												"productId": 4076,
+												"reviewDate": "2019-06-05T21:32:38.0207446+00:00",
+												"reviewText": "My neighbor Ardeth has one of these. She works as a gasman and she says it looks fuzzy."
+											},
+											{
+												"productId": 718,
+												"reviewDate": "2020-05-03T16:04:49.3059408+00:00",
+												"reviewText": "heard about this on powerviolence radio, decided to give it a try."
+											},
+											{
+												"productId": 3342,
+												"reviewDate": "2017-06-10T08:28:46.1279408+00:00",
+												"reviewText": "this wireless is flirty."
+											},
+											{
+												"productId": 3561,
+												"reviewDate": "2017-06-19T06:31:45.3118955+00:00",
+												"reviewText": "i use it centenially when i'm in my greenhouse."
+											}
+										],
+										"9": "5226"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e5bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoEAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoEAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "95446718-596a-464e-9b1e-3107fe2b4a8f",
+										"6": "6e514e19-2419-489a-badc-f9338743e37b",
+										"7": [
+											3151,
+											6,
+											4576,
+											2304,
+											1874,
+											806,
+											1016,
+											2432,
+											3514
+										],
+										"8": [
+											{
+												"productId": 1823,
+												"reviewDate": "2018-04-07T19:55:51.280869+00:00",
+												"reviewText": "The box this comes in is 5 kilometer by 6 yard and weights 18 gram."
+											},
+											{
+												"productId": 3957,
+												"reviewDate": "2018-09-10T22:45:22.3874737+00:00",
+												"reviewText": "this Realigned is vertical."
+											},
+											{
+												"productId": 91,
+												"reviewDate": "2017-03-29T10:37:49.4732004+00:00",
+												"reviewText": "My co-worker Luka has one of these. He says it looks purple."
+											},
+											{
+												"productId": 4020,
+												"reviewDate": "2019-10-05T09:27:30.8206863+00:00",
+												"reviewText": "My scarab beetle loves to play with it."
+											},
+											{
+												"productId": 2372,
+												"reviewDate": "2020-04-22T20:41:07.6828762+00:00",
+												"reviewText": "I tried to scratch it but got cheeseburger all over it."
+											}
+										],
+										"9": "5094"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e6bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoFAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoFAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "51f74874-a367-4439-9b10-ae8eaa3a5528",
+										"6": "dbb67131-34c6-404e-8cc3-389d62b54ace",
+										"7": [],
+										"8": [
+											{
+												"productId": 3805,
+												"reviewDate": "2017-10-10T07:07:19.957179+00:00",
+												"reviewText": "this Ohio is vertical."
+											},
+											{
+												"productId": 3674,
+												"reviewDate": "2019-07-20T23:16:31.6438517+00:00",
+												"reviewText": "heard about this on smooth jazz radio, decided to give it a try."
+											},
+											{
+												"productId": 2824,
+												"reviewDate": "2019-07-12T22:57:45.1479329+00:00",
+												"reviewText": "i use it never again when i'm in my station."
+											},
+											{
+												"productId": 1388,
+												"reviewDate": "2017-10-17T04:12:30.5491101+00:00",
+												"reviewText": "I saw one of these in Bhutan and I bought one."
+											}
+										],
+										"9": "8841"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e7bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoGAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoGAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "114fbf94-5c94-4189-96f7-5282843dd5f4",
+										"6": "0c58609c-d043-4642-be0b-886564838f7d",
+										"7": [
+											1424,
+											2906,
+											3665,
+											366,
+											3597,
+											2604
+										],
+										"8": [
+											{
+												"productId": 2006,
+												"reviewDate": "2017-01-26T03:54:37.0079501+00:00",
+												"reviewText": "I tried to kidnap it but got apricot all over it."
+											}
+										],
+										"9": "2776"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e8bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoHAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoHAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "e826ce1b-aa26-4208-abe0-e3b8c53a423e",
+										"6": "392adaa0-f324-4036-8a11-03d83035b8c2",
+										"7": [
+											399,
+											879,
+											1152,
+											2072,
+											4498,
+											1712,
+											3816,
+											2985
+										],
+										"8": [
+											{
+												"productId": 2369,
+												"reviewDate": "2019-05-04T03:42:17.2949506+00:00",
+												"reviewText": "My neighbor Julisa has one of these. She works as a bartender and she says it looks crooked."
+											},
+											{
+												"productId": 3227,
+												"reviewDate": "2018-07-09T18:13:38.3011634+00:00",
+												"reviewText": "I saw this on TV and wanted to give it a try."
+											}
+										],
+										"9": "3747"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500e9bc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoIAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoIAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "234cc89a-b337-4f6c-8bc3-5f80cb84250a",
+										"6": "e296e96b-48fe-415f-977c-512ab9210249",
+										"7": [
+											2729,
+											293,
+											1916,
+											81,
+											4859,
+											876,
+											3553,
+											2090,
+											4982
+										],
+										"8": [
+											{
+												"productId": 1798,
+												"reviewDate": "2017-10-25T17:36:49.7018938+00:00",
+												"reviewText": "This USB works considerably well. It recklessly improves my basketball by a lot."
+											},
+											{
+												"productId": 679,
+												"reviewDate": "2016-12-06T02:45:06.9725751+00:00",
+												"reviewText": "talk about hatred."
+											},
+											{
+												"productId": 50,
+												"reviewDate": "2017-12-28T02:41:33.6282907+00:00",
+												"reviewText": "My co-worker Erick has one of these. He says it looks fluffy."
+											},
+											{
+												"productId": 2060,
+												"reviewDate": "2017-08-07T08:40:52.7941546+00:00",
+												"reviewText": "I saw one of these in Bhutan and I bought one."
+											},
+											{
+												"productId": 4330,
+												"reviewDate": "2016-11-13T20:02:27.8396822+00:00",
+												"reviewText": "I tried to strangle it but got hazelnut all over it."
+											}
+										],
+										"9": "6596"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500eabc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoJAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoJAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "f8fa1a75-4b95-450b-9ba4-6f392daea0f8",
+										"6": "d10b4de2-4392-408f-b9ae-6e48456e53f5",
+										"7": [
+											3672,
+											2883,
+											451,
+											1695,
+											4689,
+											2139,
+											1109
+										],
+										"8": [],
+										"9": "915"
+									},
+									{
+										"0": "attachments/",
+										"1": "\"0500ebbc-0000-0100-0000-61d770380000\"",
+										"2": "oFlHAOR7enoKAAAAAAAAAA==",
+										"3": "dbs/oFlHAA==/colls/oFlHAOR7eno=/docs/oFlHAOR7enoKAAAAAAAAAA==/",
+										"4": "1641508920",
+										"5": "ae87bb1f-9331-4b58-a2b6-5abcd46b0dac",
+										"6": "ee47e0dc-9405-43c6-ad02-23f7a115e505",
+										"7": [
+											2892,
+											2178,
+											2363,
+											2728
+										],
+										"8": [
+											{
+												"productId": 1054,
+												"reviewDate": "2016-06-16T05:09:22.7386582+00:00",
+												"reviewText": "My neighbor Zoa has one of these. She works as a scribe and she says it looks wide."
+											},
+											{
+												"productId": 2353,
+												"reviewDate": "2019-11-07T00:44:42.8753478+00:00",
+												"reviewText": "The box this comes in is 5 inch by 6 mile and weights 15 ton!!"
+											}
+										],
+										"9": "7813"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "_attachments",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "_etag",
+										"type": "string"
+									},
+									{
+										"key": "2",
+										"name": "_rid",
+										"type": "string"
+									},
+									{
+										"key": "3",
+										"name": "_self",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "_ts",
+										"type": "int"
+									},
+									{
+										"key": "5",
+										"name": "cartId",
+										"type": "string"
+									},
+									{
+										"key": "6",
+										"name": "id",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "preferredProducts",
+										"type": "ArrayType(IntegerType,true)"
+									},
+									{
+										"key": "8",
+										"name": "productReviews",
+										"type": "ArrayType(StructType(StructField(productId,IntegerType,true), StructField(reviewDate,StringType,true), StructField(reviewText,StringType,true)),true)"
+									},
+									{
+										"key": "9",
+										"name": "userId",
+										"type": "int"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"4"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"37cd9809-c029-47e7-b61a-1779f5485305": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "oFlHAOR7enoBAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "7836",
+										"3": "8170ac99-2fdf-40eb-a23d-285dbc6ce781",
+										"4": [
+											2397,
+											375,
+											3692,
+											174,
+											3984,
+											2319,
+											1269,
+											3577
+										],
+										"5": [
+											{
+												"productId": 1575,
+												"reviewText": "I tried to nail it but got strawberry all over it.",
+												"reviewDate": "2017-09-30T03:17:19.0098342+00:00"
+											},
+											{
+												"productId": 4961,
+												"reviewText": "My chicken loves to play with it.",
+												"reviewDate": "2016-10-27T12:04:12.7230765+00:00"
+											},
+											{
+												"productId": 2104,
+												"reviewText": "My co-worker Knute has one of these. He says it looks smoky.",
+												"reviewDate": "2016-06-18T06:11:16.6395851+00:00"
+											},
+											{
+												"productId": 532,
+												"reviewText": "My co-worker Ali has one of these. He says it looks towering.",
+												"reviewDate": "2017-05-26T08:40:15.446633+00:00"
+											},
+											{
+												"productId": 2887,
+												"reviewText": "The box this comes in is 3 inch by 6 centimeter and weights 15 ounce!",
+												"reviewDate": "2018-02-05T03:12:22.0090741+00:00"
+											}
+										],
+										"6": "75085929-f580-4370-a947-eb1f01e5879c",
+										"7": "\"0500e2bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoCAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6235",
+										"3": "6747d80f-fbbe-4182-a2c2-db9fdb5a27ea",
+										"4": [
+											3488,
+											2210,
+											97,
+											2023,
+											3871,
+											4307,
+											403
+										],
+										"5": [
+											{
+												"productId": 1262,
+												"reviewText": "i use it barely when i'm in my store.",
+												"reviewDate": "2017-11-28T21:06:15.786599+00:00"
+											},
+											{
+												"productId": 1398,
+												"reviewText": "I saw one of these in Macau and I bought one.",
+												"reviewDate": "2019-03-31T14:23:29.9333121+00:00"
+											},
+											{
+												"productId": 2900,
+												"reviewText": "My neighbor Fannie has one of these. She works as a teacher and she says it looks spiky.",
+												"reviewDate": "2017-09-01T23:15:42.9252417+00:00"
+											},
+											{
+												"productId": 3603,
+												"reviewText": "My co-worker Fate has one of these. He says it looks tall.",
+												"reviewDate": "2017-02-04T18:33:28.0188338+00:00"
+											},
+											{
+												"productId": 403,
+												"reviewText": "My macaroni penguin loves to play with it.",
+												"reviewDate": "2017-06-05T06:20:55.3502681+00:00"
+											}
+										],
+										"6": "be5ef3cc-a6cc-40ac-8bcf-4d56c0b6953f",
+										"7": "\"0500e3bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoDAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "5226",
+										"3": "63103294-99c1-4978-9c75-343d47e08d46",
+										"4": [
+											3572,
+											1214,
+											3029,
+											1256,
+											369,
+											214
+										],
+										"5": [
+											{
+												"productId": 4442,
+												"reviewText": "This Strategist works very well. It persistently improves my soccer by a lot.",
+												"reviewDate": "2018-09-17T10:16:21.2957287+00:00"
+											},
+											{
+												"productId": 4076,
+												"reviewText": "My neighbor Ardeth has one of these. She works as a gasman and she says it looks fuzzy.",
+												"reviewDate": "2019-06-05T21:32:38.0207446+00:00"
+											},
+											{
+												"productId": 718,
+												"reviewText": "heard about this on powerviolence radio, decided to give it a try.",
+												"reviewDate": "2020-05-03T16:04:49.3059408+00:00"
+											},
+											{
+												"productId": 3342,
+												"reviewText": "this wireless is flirty.",
+												"reviewDate": "2017-06-10T08:28:46.1279408+00:00"
+											},
+											{
+												"productId": 3561,
+												"reviewText": "i use it centenially when i'm in my greenhouse.",
+												"reviewDate": "2017-06-19T06:31:45.3118955+00:00"
+											}
+										],
+										"6": "8fd01553-9603-44bd-a0f7-027a92de870b",
+										"7": "\"0500e4bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoEAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "5094",
+										"3": "95446718-596a-464e-9b1e-3107fe2b4a8f",
+										"4": [
+											3151,
+											6,
+											4576,
+											2304,
+											1874,
+											806,
+											1016,
+											2432,
+											3514
+										],
+										"5": [
+											{
+												"productId": 1823,
+												"reviewText": "The box this comes in is 5 kilometer by 6 yard and weights 18 gram.",
+												"reviewDate": "2018-04-07T19:55:51.280869+00:00"
+											},
+											{
+												"productId": 3957,
+												"reviewText": "this Realigned is vertical.",
+												"reviewDate": "2018-09-10T22:45:22.3874737+00:00"
+											},
+											{
+												"productId": 91,
+												"reviewText": "My co-worker Luka has one of these. He says it looks purple.",
+												"reviewDate": "2017-03-29T10:37:49.4732004+00:00"
+											},
+											{
+												"productId": 4020,
+												"reviewText": "My scarab beetle loves to play with it.",
+												"reviewDate": "2019-10-05T09:27:30.8206863+00:00"
+											},
+											{
+												"productId": 2372,
+												"reviewText": "I tried to scratch it but got cheeseburger all over it.",
+												"reviewDate": "2020-04-22T20:41:07.6828762+00:00"
+											}
+										],
+										"6": "6e514e19-2419-489a-badc-f9338743e37b",
+										"7": "\"0500e5bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoFAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "8841",
+										"3": "51f74874-a367-4439-9b10-ae8eaa3a5528",
+										"4": [],
+										"5": [
+											{
+												"productId": 3805,
+												"reviewText": "this Ohio is vertical.",
+												"reviewDate": "2017-10-10T07:07:19.957179+00:00"
+											},
+											{
+												"productId": 3674,
+												"reviewText": "heard about this on smooth jazz radio, decided to give it a try.",
+												"reviewDate": "2019-07-20T23:16:31.6438517+00:00"
+											},
+											{
+												"productId": 2824,
+												"reviewText": "i use it never again when i'm in my station.",
+												"reviewDate": "2019-07-12T22:57:45.1479329+00:00"
+											},
+											{
+												"productId": 1388,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-10-17T04:12:30.5491101+00:00"
+											}
+										],
+										"6": "dbb67131-34c6-404e-8cc3-389d62b54ace",
+										"7": "\"0500e6bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoGAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "2776",
+										"3": "114fbf94-5c94-4189-96f7-5282843dd5f4",
+										"4": [
+											1424,
+											2906,
+											3665,
+											366,
+											3597,
+											2604
+										],
+										"5": [
+											{
+												"productId": 2006,
+												"reviewText": "I tried to kidnap it but got apricot all over it.",
+												"reviewDate": "2017-01-26T03:54:37.0079501+00:00"
+											}
+										],
+										"6": "0c58609c-d043-4642-be0b-886564838f7d",
+										"7": "\"0500e7bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoHAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "3747",
+										"3": "e826ce1b-aa26-4208-abe0-e3b8c53a423e",
+										"4": [
+											399,
+											879,
+											1152,
+											2072,
+											4498,
+											1712,
+											3816,
+											2985
+										],
+										"5": [
+											{
+												"productId": 2369,
+												"reviewText": "My neighbor Julisa has one of these. She works as a bartender and she says it looks crooked.",
+												"reviewDate": "2019-05-04T03:42:17.2949506+00:00"
+											},
+											{
+												"productId": 3227,
+												"reviewText": "I saw this on TV and wanted to give it a try.",
+												"reviewDate": "2018-07-09T18:13:38.3011634+00:00"
+											}
+										],
+										"6": "392adaa0-f324-4036-8a11-03d83035b8c2",
+										"7": "\"0500e8bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoIAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6596",
+										"3": "234cc89a-b337-4f6c-8bc3-5f80cb84250a",
+										"4": [
+											2729,
+											293,
+											1916,
+											81,
+											4859,
+											876,
+											3553,
+											2090,
+											4982
+										],
+										"5": [
+											{
+												"productId": 1798,
+												"reviewText": "This USB works considerably well. It recklessly improves my basketball by a lot.",
+												"reviewDate": "2017-10-25T17:36:49.7018938+00:00"
+											},
+											{
+												"productId": 679,
+												"reviewText": "talk about hatred.",
+												"reviewDate": "2016-12-06T02:45:06.9725751+00:00"
+											},
+											{
+												"productId": 50,
+												"reviewText": "My co-worker Erick has one of these. He says it looks fluffy.",
+												"reviewDate": "2017-12-28T02:41:33.6282907+00:00"
+											},
+											{
+												"productId": 2060,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-08-07T08:40:52.7941546+00:00"
+											},
+											{
+												"productId": 4330,
+												"reviewText": "I tried to strangle it but got hazelnut all over it.",
+												"reviewDate": "2016-11-13T20:02:27.8396822+00:00"
+											}
+										],
+										"6": "e296e96b-48fe-415f-977c-512ab9210249",
+										"7": "\"0500e9bc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoJAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "915",
+										"3": "f8fa1a75-4b95-450b-9ba4-6f392daea0f8",
+										"4": [
+											3672,
+											2883,
+											451,
+											1695,
+											4689,
+											2139,
+											1109
+										],
+										"5": [],
+										"6": "d10b4de2-4392-408f-b9ae-6e48456e53f5",
+										"7": "\"0500eabc-0000-0100-0000-61d770380000\""
+									},
+									{
+										"0": "oFlHAOR7enoLAAAAAAAAAA==",
+										"1": "1641508920",
+										"2": "6178",
+										"3": "bd408eb5-1b51-4cc1-a3c1-fe31413e7680",
+										"4": [
+											3733,
+											1272,
+											1966,
+											1881
+										],
+										"5": [
+											{
+												"productId": 2240,
+												"reviewText": "I saw one of these in Kazakhstan and I bought one.",
+												"reviewDate": "2016-06-09T16:34:32.477325+00:00"
+											}
+										],
+										"6": "633a84fd-7ee1-4d29-a0d2-4129a4f87a5d",
+										"7": "\"0500ecbc-0000-0100-0000-61d770380000\""
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "_rid",
+										"type": "string"
+									},
+									{
+										"key": "1",
+										"name": "_ts",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "3",
+										"name": "cartId",
+										"type": "string"
+									},
+									{
+										"key": "4",
+										"name": "preferredProducts",
+										"type": "ArrayType(LongType,true)"
+									},
+									{
+										"key": "5",
+										"name": "productReviews",
+										"type": "ArrayType(StructType(StructField(productId,LongType,true), StructField(reviewText,StringType,true), StructField(reviewDate,StringType,true)),true)"
+									},
+									{
+										"key": "6",
+										"name": "id",
+										"type": "string"
+									},
+									{
+										"key": "7",
+										"name": "_etag",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"0"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"2d92bca2-fbe7-4d0d-96c6-5b197b8a402f": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": [
+											2397,
+											375,
+											3692,
+											174,
+											3984,
+											2319,
+											1269,
+											3577
+										],
+										"1": "7836",
+										"2": [
+											{
+												"productId": 1575,
+												"reviewText": "I tried to nail it but got strawberry all over it.",
+												"reviewDate": "2017-09-30T03:17:19.0098342+00:00"
+											},
+											{
+												"productId": 4961,
+												"reviewText": "My chicken loves to play with it.",
+												"reviewDate": "2016-10-27T12:04:12.7230765+00:00"
+											},
+											{
+												"productId": 2104,
+												"reviewText": "My co-worker Knute has one of these. He says it looks smoky.",
+												"reviewDate": "2016-06-18T06:11:16.6395851+00:00"
+											},
+											{
+												"productId": 532,
+												"reviewText": "My co-worker Ali has one of these. He says it looks towering.",
+												"reviewDate": "2017-05-26T08:40:15.446633+00:00"
+											},
+											{
+												"productId": 2887,
+												"reviewText": "The box this comes in is 3 inch by 6 centimeter and weights 15 ounce!",
+												"reviewDate": "2018-02-05T03:12:22.0090741+00:00"
+											}
+										],
+										"3": "8170ac99-2fdf-40eb-a23d-285dbc6ce781"
+									},
+									{
+										"0": [
+											3488,
+											2210,
+											97,
+											2023,
+											3871,
+											4307,
+											403
+										],
+										"1": "6235",
+										"2": [
+											{
+												"productId": 1262,
+												"reviewText": "i use it barely when i'm in my store.",
+												"reviewDate": "2017-11-28T21:06:15.786599+00:00"
+											},
+											{
+												"productId": 1398,
+												"reviewText": "I saw one of these in Macau and I bought one.",
+												"reviewDate": "2019-03-31T14:23:29.9333121+00:00"
+											},
+											{
+												"productId": 2900,
+												"reviewText": "My neighbor Fannie has one of these. She works as a teacher and she says it looks spiky.",
+												"reviewDate": "2017-09-01T23:15:42.9252417+00:00"
+											},
+											{
+												"productId": 3603,
+												"reviewText": "My co-worker Fate has one of these. He says it looks tall.",
+												"reviewDate": "2017-02-04T18:33:28.0188338+00:00"
+											},
+											{
+												"productId": 403,
+												"reviewText": "My macaroni penguin loves to play with it.",
+												"reviewDate": "2017-06-05T06:20:55.3502681+00:00"
+											}
+										],
+										"3": "6747d80f-fbbe-4182-a2c2-db9fdb5a27ea"
+									},
+									{
+										"0": [
+											3572,
+											1214,
+											3029,
+											1256,
+											369,
+											214
+										],
+										"1": "5226",
+										"2": [
+											{
+												"productId": 4442,
+												"reviewText": "This Strategist works very well. It persistently improves my soccer by a lot.",
+												"reviewDate": "2018-09-17T10:16:21.2957287+00:00"
+											},
+											{
+												"productId": 4076,
+												"reviewText": "My neighbor Ardeth has one of these. She works as a gasman and she says it looks fuzzy.",
+												"reviewDate": "2019-06-05T21:32:38.0207446+00:00"
+											},
+											{
+												"productId": 718,
+												"reviewText": "heard about this on powerviolence radio, decided to give it a try.",
+												"reviewDate": "2020-05-03T16:04:49.3059408+00:00"
+											},
+											{
+												"productId": 3342,
+												"reviewText": "this wireless is flirty.",
+												"reviewDate": "2017-06-10T08:28:46.1279408+00:00"
+											},
+											{
+												"productId": 3561,
+												"reviewText": "i use it centenially when i'm in my greenhouse.",
+												"reviewDate": "2017-06-19T06:31:45.3118955+00:00"
+											}
+										],
+										"3": "63103294-99c1-4978-9c75-343d47e08d46"
+									},
+									{
+										"0": [
+											3151,
+											6,
+											4576,
+											2304,
+											1874,
+											806,
+											1016,
+											2432,
+											3514
+										],
+										"1": "5094",
+										"2": [
+											{
+												"productId": 1823,
+												"reviewText": "The box this comes in is 5 kilometer by 6 yard and weights 18 gram.",
+												"reviewDate": "2018-04-07T19:55:51.280869+00:00"
+											},
+											{
+												"productId": 3957,
+												"reviewText": "this Realigned is vertical.",
+												"reviewDate": "2018-09-10T22:45:22.3874737+00:00"
+											},
+											{
+												"productId": 91,
+												"reviewText": "My co-worker Luka has one of these. He says it looks purple.",
+												"reviewDate": "2017-03-29T10:37:49.4732004+00:00"
+											},
+											{
+												"productId": 4020,
+												"reviewText": "My scarab beetle loves to play with it.",
+												"reviewDate": "2019-10-05T09:27:30.8206863+00:00"
+											},
+											{
+												"productId": 2372,
+												"reviewText": "I tried to scratch it but got cheeseburger all over it.",
+												"reviewDate": "2020-04-22T20:41:07.6828762+00:00"
+											}
+										],
+										"3": "95446718-596a-464e-9b1e-3107fe2b4a8f"
+									},
+									{
+										"0": [],
+										"1": "8841",
+										"2": [
+											{
+												"productId": 3805,
+												"reviewText": "this Ohio is vertical.",
+												"reviewDate": "2017-10-10T07:07:19.957179+00:00"
+											},
+											{
+												"productId": 3674,
+												"reviewText": "heard about this on smooth jazz radio, decided to give it a try.",
+												"reviewDate": "2019-07-20T23:16:31.6438517+00:00"
+											},
+											{
+												"productId": 2824,
+												"reviewText": "i use it never again when i'm in my station.",
+												"reviewDate": "2019-07-12T22:57:45.1479329+00:00"
+											},
+											{
+												"productId": 1388,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-10-17T04:12:30.5491101+00:00"
+											}
+										],
+										"3": "51f74874-a367-4439-9b10-ae8eaa3a5528"
+									},
+									{
+										"0": [
+											1424,
+											2906,
+											3665,
+											366,
+											3597,
+											2604
+										],
+										"1": "2776",
+										"2": [
+											{
+												"productId": 2006,
+												"reviewText": "I tried to kidnap it but got apricot all over it.",
+												"reviewDate": "2017-01-26T03:54:37.0079501+00:00"
+											}
+										],
+										"3": "114fbf94-5c94-4189-96f7-5282843dd5f4"
+									},
+									{
+										"0": [
+											399,
+											879,
+											1152,
+											2072,
+											4498,
+											1712,
+											3816,
+											2985
+										],
+										"1": "3747",
+										"2": [
+											{
+												"productId": 2369,
+												"reviewText": "My neighbor Julisa has one of these. She works as a bartender and she says it looks crooked.",
+												"reviewDate": "2019-05-04T03:42:17.2949506+00:00"
+											},
+											{
+												"productId": 3227,
+												"reviewText": "I saw this on TV and wanted to give it a try.",
+												"reviewDate": "2018-07-09T18:13:38.3011634+00:00"
+											}
+										],
+										"3": "e826ce1b-aa26-4208-abe0-e3b8c53a423e"
+									},
+									{
+										"0": [
+											2729,
+											293,
+											1916,
+											81,
+											4859,
+											876,
+											3553,
+											2090,
+											4982
+										],
+										"1": "6596",
+										"2": [
+											{
+												"productId": 1798,
+												"reviewText": "This USB works considerably well. It recklessly improves my basketball by a lot.",
+												"reviewDate": "2017-10-25T17:36:49.7018938+00:00"
+											},
+											{
+												"productId": 679,
+												"reviewText": "talk about hatred.",
+												"reviewDate": "2016-12-06T02:45:06.9725751+00:00"
+											},
+											{
+												"productId": 50,
+												"reviewText": "My co-worker Erick has one of these. He says it looks fluffy.",
+												"reviewDate": "2017-12-28T02:41:33.6282907+00:00"
+											},
+											{
+												"productId": 2060,
+												"reviewText": "I saw one of these in Bhutan and I bought one.",
+												"reviewDate": "2017-08-07T08:40:52.7941546+00:00"
+											},
+											{
+												"productId": 4330,
+												"reviewText": "I tried to strangle it but got hazelnut all over it.",
+												"reviewDate": "2016-11-13T20:02:27.8396822+00:00"
+											}
+										],
+										"3": "234cc89a-b337-4f6c-8bc3-5f80cb84250a"
+									},
+									{
+										"0": [
+											3672,
+											2883,
+											451,
+											1695,
+											4689,
+											2139,
+											1109
+										],
+										"1": "915",
+										"2": [],
+										"3": "f8fa1a75-4b95-450b-9ba4-6f392daea0f8"
+									},
+									{
+										"0": [
+											3733,
+											1272,
+											1966,
+											1881
+										],
+										"1": "6178",
+										"2": [
+											{
+												"productId": 2240,
+												"reviewText": "I saw one of these in Kazakhstan and I bought one.",
+												"reviewDate": "2016-06-09T16:34:32.477325+00:00"
+											}
+										],
+										"3": "bd408eb5-1b51-4cc1-a3c1-fe31413e7680"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "preferredProducts",
+										"type": "ArrayType(LongType,true)"
+									},
+									{
+										"key": "1",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "productReviews",
+										"type": "ArrayType(StructType(StructField(productId,LongType,true), StructField(reviewText,StringType,true), StructField(reviewDate,StringType,true)),true)"
+									},
+									{
+										"key": "3",
+										"name": "cartId",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"3"
+									],
+									"seriesFieldKeys": [
+										"1"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"c6539518-41bb-46ee-aef8-a33127498794": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "7836",
+										"1": {
+											"productId": 1575,
+											"reviewText": "I tried to nail it but got strawberry all over it.",
+											"reviewDate": "2017-09-30T03:17:19.0098342+00:00"
+										}
+									},
+									{
+										"0": "7836",
+										"1": {
+											"productId": 4961,
+											"reviewText": "My chicken loves to play with it.",
+											"reviewDate": "2016-10-27T12:04:12.7230765+00:00"
+										}
+									},
+									{
+										"0": "7836",
+										"1": {
+											"productId": 2104,
+											"reviewText": "My co-worker Knute has one of these. He says it looks smoky.",
+											"reviewDate": "2016-06-18T06:11:16.6395851+00:00"
+										}
+									},
+									{
+										"0": "7836",
+										"1": {
+											"productId": 532,
+											"reviewText": "My co-worker Ali has one of these. He says it looks towering.",
+											"reviewDate": "2017-05-26T08:40:15.446633+00:00"
+										}
+									},
+									{
+										"0": "7836",
+										"1": {
+											"productId": 2887,
+											"reviewText": "The box this comes in is 3 inch by 6 centimeter and weights 15 ounce!",
+											"reviewDate": "2018-02-05T03:12:22.0090741+00:00"
+										}
+									},
+									{
+										"0": "6235",
+										"1": {
+											"productId": 1262,
+											"reviewText": "i use it barely when i'm in my store.",
+											"reviewDate": "2017-11-28T21:06:15.786599+00:00"
+										}
+									},
+									{
+										"0": "6235",
+										"1": {
+											"productId": 1398,
+											"reviewText": "I saw one of these in Macau and I bought one.",
+											"reviewDate": "2019-03-31T14:23:29.9333121+00:00"
+										}
+									},
+									{
+										"0": "6235",
+										"1": {
+											"productId": 2900,
+											"reviewText": "My neighbor Fannie has one of these. She works as a teacher and she says it looks spiky.",
+											"reviewDate": "2017-09-01T23:15:42.9252417+00:00"
+										}
+									},
+									{
+										"0": "6235",
+										"1": {
+											"productId": 3603,
+											"reviewText": "My co-worker Fate has one of these. He says it looks tall.",
+											"reviewDate": "2017-02-04T18:33:28.0188338+00:00"
+										}
+									},
+									{
+										"0": "6235",
+										"1": {
+											"productId": 403,
+											"reviewText": "My macaroni penguin loves to play with it.",
+											"reviewDate": "2017-06-05T06:20:55.3502681+00:00"
+										}
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "productReviews",
+										"type": "StructType(StructField(productId,LongType,true), StructField(reviewText,StringType,true), StructField(reviewDate,StringType,true))"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"de02f02d-cbbd-4bc1-90f4-3e0be0de1267": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "7836",
+										"1": "2397"
+									},
+									{
+										"0": "7836",
+										"1": "375"
+									},
+									{
+										"0": "7836",
+										"1": "3692"
+									},
+									{
+										"0": "7836",
+										"1": "174"
+									},
+									{
+										"0": "7836",
+										"1": "3984"
+									},
+									{
+										"0": "7836",
+										"1": "2319"
+									},
+									{
+										"0": "7836",
+										"1": "1269"
+									},
+									{
+										"0": "7836",
+										"1": "3577"
+									},
+									{
+										"0": "6235",
+										"1": "3488"
+									},
+									{
+										"0": "6235",
+										"1": "2210"
+									},
+									{
+										"0": "6235",
+										"1": "97"
+									},
+									{
+										"0": "6235",
+										"1": "2023"
+									},
+									{
+										"0": "6235",
+										"1": "3871"
+									},
+									{
+										"0": "6235",
+										"1": "4307"
+									},
+									{
+										"0": "6235",
+										"1": "403"
+									},
+									{
+										"0": "5226",
+										"1": "3572"
+									},
+									{
+										"0": "5226",
+										"1": "1214"
+									},
+									{
+										"0": "5226",
+										"1": "3029"
+									},
+									{
+										"0": "5226",
+										"1": "1256"
+									},
+									{
+										"0": "5226",
+										"1": "369"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "productId",
+										"type": "bigint"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"6d51bb5f-4b9d-40e2-b94e-e11fee0e7074": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "1",
+										"1": "3286",
+										"2": "I saw one of these in Saint Pierre and Miquelon and I bought one."
+									},
+									{
+										"0": "1",
+										"1": "2864",
+										"2": "i use it this time when i'm in my port-a-potty."
+									},
+									{
+										"0": "1",
+										"1": "4953",
+										"2": "My neighbor Georgine has one of these. She works as a fireman and she says it looks colorful."
+									},
+									{
+										"0": "1",
+										"1": "3687",
+										"2": "I saw one of these in Nauru and I bought one."
+									},
+									{
+										"0": "1",
+										"1": "3397",
+										"2": "It only works when I'm Juan de Nova Island."
+									},
+									{
+										"0": "2",
+										"1": "4151",
+										"2": "My neighbor Georgine has one of these. She works as a fireman and she says it looks colorful."
+									},
+									{
+										"0": "2",
+										"1": "374",
+										"2": "one of my hobbies is cooking. and when i'm cooking this works great."
+									},
+									{
+										"0": "2",
+										"1": "2900",
+										"2": "My co-worker Archer has one of these. He says it looks crooked."
+									},
+									{
+										"0": "2",
+										"1": "1808",
+										"2": "It only works when I'm Samoa."
+									},
+									{
+										"0": "2",
+										"1": "4450",
+										"2": "My baboon loves to play with it."
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "productId",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "reviewText",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"d020d98b-5093-47fe-99e2-e9e73947f13c": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "346",
+										"1": "389",
+										"2": "346",
+										"3": "389",
+										"4": "i use it once a week when i'm in my firetruck."
+									},
+									{
+										"0": "518",
+										"1": "684",
+										"2": "518",
+										"3": "684",
+										"4": "talk about bliss!!"
+									},
+									{
+										"0": "549",
+										"1": "1639",
+										"2": "549",
+										"3": "1639",
+										"4": "talk about anticipation!"
+									},
+									{
+										"0": "922",
+										"1": "1838",
+										"2": "922",
+										"3": "1838",
+										"4": "I saw one of these in Juan de Nova Island and I bought one."
+									},
+									{
+										"0": "929",
+										"1": "2478",
+										"2": "929",
+										"3": "2478",
+										"4": "The box this comes in is 5 kilometer by 6 yard and weights 18 gram."
+									},
+									{
+										"0": "1550",
+										"1": "2453",
+										"2": "1550",
+										"3": "2453",
+										"4": "I saw one of these in Tanzania and I bought one."
+									},
+									{
+										"0": "1557",
+										"1": "4063",
+										"2": "1557",
+										"3": "4063",
+										"4": "It only works when I'm Samoa."
+									},
+									{
+										"0": "1590",
+										"1": "656",
+										"2": "1590",
+										"3": "656",
+										"4": "I tried to vomit it but got bonbon all over it."
+									},
+									{
+										"0": "2177",
+										"1": "4163",
+										"2": "2177",
+										"3": "4163",
+										"4": "I tried to pepper it but got prune all over it."
+									},
+									{
+										"0": "2382",
+										"1": "1954",
+										"2": "2382",
+										"3": "1954",
+										"4": "My raven loves to play with it."
+									},
+									{
+										"0": "2662",
+										"1": "174",
+										"2": "2662",
+										"3": "174",
+										"4": "talk about contentment!!!"
+									},
+									{
+										"0": "2863",
+										"1": "4003",
+										"2": "2863",
+										"3": "4003",
+										"4": "talk about contempt!!!"
+									},
+									{
+										"0": "3496",
+										"1": "2044",
+										"2": "3496",
+										"3": "2044",
+										"4": "The box this comes in is 3 centimeter by 5 kilometer and weights 13 ounce!!"
+									},
+									{
+										"0": "3616",
+										"1": "3035",
+										"2": "3616",
+										"3": "3035",
+										"4": "The box this comes in is 3 kilometer by 5 foot and weights 16 megaton!!!"
+									},
+									{
+										"0": "3892",
+										"1": "2297",
+										"2": "3892",
+										"3": "2297",
+										"4": "My Shih-Tzu loves to play with it."
+									},
+									{
+										"0": "3971",
+										"1": "2624",
+										"2": "3971",
+										"3": "2624",
+										"4": "My goldfinch loves to play with it."
+									},
+									{
+										"0": "4684",
+										"1": "2739",
+										"2": "4684",
+										"3": "2739",
+										"4": "This deliverables works certainly well. It excitedly improves my football by a lot."
+									},
+									{
+										"0": "5014",
+										"1": "319",
+										"2": "5014",
+										"3": "319",
+										"4": "this Graphic Interface is vertical."
+									},
+									{
+										"0": "5316",
+										"1": "2078",
+										"2": "5316",
+										"3": "2078",
+										"4": "The box this comes in is 3 meter by 5 foot and weights 11 kilogram."
+									},
+									{
+										"0": "5389",
+										"1": "734",
+										"2": "5389",
+										"3": "734",
+										"4": "one of my hobbies is sailing. and when i'm sailing this works great."
+									},
+									{
+										"0": "6049",
+										"1": "3487",
+										"2": "6049",
+										"3": "3487",
+										"4": "talk about pleasure!"
+									},
+									{
+										"0": "6235",
+										"1": "403",
+										"2": "6235",
+										"3": "403",
+										"4": "My macaroni penguin loves to play with it."
+									},
+									{
+										"0": "6435",
+										"1": "2809",
+										"2": "6435",
+										"3": "2809",
+										"4": "heard about this on bouyon radio, decided to give it a try."
+									},
+									{
+										"0": "6686",
+										"1": "3320",
+										"2": "6686",
+										"3": "3320",
+										"4": "This Timor-Leste works quite well. It romantically improves my golf by a lot."
+									},
+									{
+										"0": "7520",
+										"1": "3854",
+										"2": "7520",
+										"3": "3854",
+										"4": "I tried to grab it but got bonbon all over it."
+									},
+									{
+										"0": "7761",
+										"1": "3586",
+										"2": "7761",
+										"3": "3586",
+										"4": "It only works when I'm Niger."
+									},
+									{
+										"0": "8482",
+										"1": "2640",
+										"2": "8482",
+										"3": "2640",
+										"4": "I saw one of these in Sao Tome and Principe and I bought one."
+									},
+									{
+										"0": "9117",
+										"1": "3298",
+										"2": "9117",
+										"3": "3298",
+										"4": "i use it daily when i'm in my outhouse."
+									},
+									{
+										"0": "9505",
+										"1": "321",
+										"2": "9505",
+										"3": "321",
+										"4": "heard about this on Kansas City jazz radio, decided to give it a try."
+									},
+									{
+										"0": "9935",
+										"1": "4477",
+										"2": "9935",
+										"3": "4477",
+										"4": "My penguin loves to play with it."
+									},
+									{
+										"0": "9939",
+										"1": "2513",
+										"2": "9939",
+										"3": "2513",
+										"4": "My neighbor Eller has one of these. She works as a butler and she says it looks smoky."
+									},
+									{
+										"0": "10302",
+										"1": "957",
+										"2": "10302",
+										"3": "957",
+										"4": "heard about this on ndombolo radio, decided to give it a try."
+									},
+									{
+										"0": "11546",
+										"1": "989",
+										"2": "11546",
+										"3": "989",
+										"4": "My neighbor Germaine has one of these. She works as a salesman and she says it looks red."
+									},
+									{
+										"0": "11697",
+										"1": "520",
+										"2": "11697",
+										"3": "520",
+										"4": "one of my hobbies is drawing. and when i'm drawing this works great."
+									},
+									{
+										"0": "11948",
+										"1": "4603",
+										"2": "11948",
+										"3": "4603",
+										"4": "talk about surprise!!!"
+									},
+									{
+										"0": "12075",
+										"1": "2765",
+										"2": "12075",
+										"3": "2765",
+										"4": "My velociraptor loves to play with it."
+									},
+									{
+										"0": "12632",
+										"1": "543",
+										"2": "12632",
+										"3": "543",
+										"4": "this models is vertical."
+									},
+									{
+										"0": "12760",
+										"1": "3681",
+										"2": "12760",
+										"3": "3681",
+										"4": "this generating is awesome."
+									},
+									{
+										"0": "12869",
+										"1": "210",
+										"2": "12869",
+										"3": "210",
+										"4": "My neighbor Montserrat has one of these. She works as a circus performer and she says it looks shriveled."
+									},
+									{
+										"0": "13119",
+										"1": "3553",
+										"2": "13119",
+										"3": "3553",
+										"4": "It only works when I'm Martinique."
+									},
+									{
+										"0": "13634",
+										"1": "2830",
+										"2": "13634",
+										"3": "2830",
+										"4": "It only works when I'm Martinique."
+									},
+									{
+										"0": "13794",
+										"1": "1964",
+										"2": "13794",
+										"3": "1964",
+										"4": "My co-worker Cato has one of these. He says it looks sopping."
+									},
+									{
+										"0": "14883",
+										"1": "770",
+										"2": "14883",
+										"3": "770",
+										"4": "I saw this on TV and wanted to give it a try."
+									},
+									{
+										"0": "14892",
+										"1": "3114",
+										"2": "14892",
+										"3": "3114",
+										"4": "I saw one of these in Canada and I bought one."
+									},
+									{
+										"0": "16338",
+										"1": "1627",
+										"2": "16338",
+										"3": "1627",
+										"4": "heard about this on bouyon radio, decided to give it a try."
+									},
+									{
+										"0": "16715",
+										"1": "3060",
+										"2": "16715",
+										"3": "3060",
+										"4": "This Handmade Soft Towels works too well. It nonchalantly improves my baseball by a lot."
+									},
+									{
+										"0": "17080",
+										"1": "4607",
+										"2": "17080",
+										"3": "4607",
+										"4": "I tried to strangle it but got hazelnut all over it."
+									},
+									{
+										"0": "18314",
+										"1": "54",
+										"2": "18314",
+										"3": "54",
+										"4": "talk about surprise!!!"
+									},
+									{
+										"0": "18355",
+										"1": "2828",
+										"2": "18355",
+										"3": "2828",
+										"4": "this Dominican Republic is nifty."
+									},
+									{
+										"0": "18882",
+										"1": "1229",
+										"2": "18882",
+										"3": "1229",
+										"4": "This SDD works really well. It wildly improves my baseball by a lot."
+									},
+									{
+										"0": "19202",
+										"1": "118",
+										"2": "19202",
+										"3": "118",
+										"4": "one of my hobbies is web-browsing. and when i'm browsing the web this works great."
+									},
+									{
+										"0": "19221",
+										"1": "4500",
+										"2": "19221",
+										"3": "4500",
+										"4": "My ant loves to play with it."
+									},
+									{
+										"0": "19442",
+										"1": "4155",
+										"2": "19442",
+										"3": "4155",
+										"4": "It only works when I'm Niue."
+									},
+									{
+										"0": "19645",
+										"1": "4427",
+										"2": "19645",
+										"3": "4427",
+										"4": "i use it never when i'm in my hotel."
+									},
+									{
+										"0": "20269",
+										"1": "498",
+										"2": "20269",
+										"3": "498",
+										"4": "I saw one of these in New Zealand and I bought one."
+									},
+									{
+										"0": "20302",
+										"1": "4627",
+										"2": "20302",
+										"3": "4627",
+										"4": "i use it this time when i'm in my port-a-potty."
+									},
+									{
+										"0": "20647",
+										"1": "4020",
+										"2": "20647",
+										"3": "4020",
+										"4": "This Investment Account works excessively well. It mortally improves my golf by a lot."
+									},
+									{
+										"0": "20681",
+										"1": "4622",
+										"2": "20681",
+										"3": "4622",
+										"4": "My dog loves to play with it."
+									},
+									{
+										"0": "20764",
+										"1": "1536",
+										"2": "20764",
+										"3": "1536",
+										"4": "It only works when I'm New Caledonia."
+									},
+									{
+										"0": "20875",
+										"1": "2420",
+										"2": "20875",
+										"3": "2420",
+										"4": "I tried to manhandle it but got bun all over it."
+									},
+									{
+										"0": "20950",
+										"1": "3595",
+										"2": "20950",
+										"3": "3595",
+										"4": "this override is mellow."
+									},
+									{
+										"0": "21066",
+										"1": "3590",
+										"2": "21066",
+										"3": "3590",
+										"4": "My beagle loves to play with it."
+									},
+									{
+										"0": "21294",
+										"1": "2075",
+										"2": "21294",
+										"3": "2075",
+										"4": "My co-worker Bryton has one of these. He says it looks ragged."
+									},
+									{
+										"0": "21822",
+										"1": "2665",
+										"2": "21822",
+										"3": "2665",
+										"4": "It only works when I'm Chad."
+									},
+									{
+										"0": "21883",
+										"1": "486",
+										"2": "21883",
+										"3": "486",
+										"4": "i use it daily when i'm in my courthouse."
+									},
+									{
+										"0": "21933",
+										"1": "2613",
+										"2": "21933",
+										"3": "2613",
+										"4": "I saw one of these in Vanuatu and I bought one."
+									},
+									{
+										"0": "22196",
+										"1": "4677",
+										"2": "22196",
+										"3": "4677",
+										"4": "i use it barely when i'm in my store."
+									},
+									{
+										"0": "22496",
+										"1": "3441",
+										"2": "22496",
+										"3": "3441",
+										"4": "one of my hobbies is poetry. and when i'm writing poems this works great."
+									},
+									{
+										"0": "22598",
+										"1": "3439",
+										"2": "22598",
+										"3": "3439",
+										"4": "this reboot is slurpee."
+									},
+									{
+										"0": "22630",
+										"1": "4680",
+										"2": "22630",
+										"3": "4680",
+										"4": "I tried to shred it but got watermelon all over it."
+									},
+									{
+										"0": "22776",
+										"1": "3890",
+										"2": "22776",
+										"3": "3890",
+										"4": "My chicken loves to play with it."
+									},
+									{
+										"0": "22915",
+										"1": "493",
+										"2": "22915",
+										"3": "493",
+										"4": "My neighbor Aldona has one of these. She works as a butler and she says it looks humongous."
+									},
+									{
+										"0": "23408",
+										"1": "2793",
+										"2": "23408",
+										"3": "2793",
+										"4": "It only works when I'm Kuwait."
+									},
+									{
+										"0": "23642",
+										"1": "1027",
+										"2": "23642",
+										"3": "1027",
+										"4": "It only works when I'm Finland."
+									},
+									{
+										"0": "23655",
+										"1": "2853",
+										"2": "23655",
+										"3": "2853",
+										"4": "this Roads is honest."
+									},
+									{
+										"0": "23756",
+										"1": "2183",
+										"2": "23756",
+										"3": "2183",
+										"4": "heard about this on timba radio, decided to give it a try."
+									},
+									{
+										"0": "24063",
+										"1": "3241",
+										"2": "24063",
+										"3": "3241",
+										"4": "talk about sadness!!"
+									},
+									{
+										"0": "24607",
+										"1": "1851",
+										"2": "24607",
+										"3": "1851",
+										"4": "My co-worker Bryton has one of these. He says it looks ragged."
+									},
+									{
+										"0": "24725",
+										"1": "3342",
+										"2": "24725",
+										"3": "3342",
+										"4": "i use it once a week when i'm in my firetruck."
+									},
+									{
+										"0": "24773",
+										"1": "2048",
+										"2": "24773",
+										"3": "2048",
+										"4": "one of my hobbies is piano. and when i'm playing piano this works great."
+									},
+									{
+										"0": "25821",
+										"1": "4351",
+										"2": "25821",
+										"3": "4351",
+										"4": "talk about lust!!"
+									},
+									{
+										"0": "26099",
+										"1": "427",
+										"2": "26099",
+										"3": "427",
+										"4": "My neighbor Albertina has one of these. She works as a gardener and she says it looks humongous."
+									},
+									{
+										"0": "26447",
+										"1": "3048",
+										"2": "26447",
+										"3": "3048",
+										"4": "The box this comes in is 3 yard by 6 light-year and weights 11 megaton!!"
+									},
+									{
+										"0": "26687",
+										"1": "375",
+										"2": "26687",
+										"3": "375",
+										"4": "this Auto Loan Account is revolting."
+									},
+									{
+										"0": "27575",
+										"1": "2822",
+										"2": "27575",
+										"3": "2822",
+										"4": "heard about this on instrumental country radio, decided to give it a try."
+									},
+									{
+										"0": "27603",
+										"1": "2274",
+										"2": "27603",
+										"3": "2274",
+										"4": "It only works when I'm Juan de Nova Island."
+									},
+									{
+										"0": "28570",
+										"1": "2168",
+										"2": "28570",
+										"3": "2168",
+										"4": "i use it hardly when i'm in my prison."
+									},
+									{
+										"0": "28581",
+										"1": "4831",
+										"2": "28581",
+										"3": "4831",
+										"4": "This Bedfordshire works certainly well. It perfectly improves my tennis by a lot."
+									},
+									{
+										"0": "29060",
+										"1": "2221",
+										"2": "29060",
+										"3": "2221",
+										"4": "My neighbor Lular has one of these. She works as a cake decorator and she says it looks ragged."
+									},
+									{
+										"0": "29396",
+										"1": "4255",
+										"2": "29396",
+										"3": "4255",
+										"4": "This feed works so well. It imperfectly improves my baseball by a lot."
+									},
+									{
+										"0": "29507",
+										"1": "1183",
+										"2": "29507",
+										"3": "1183",
+										"4": "i use it never again when i'm in my station."
+									},
+									{
+										"0": "29929",
+										"1": "4471",
+										"2": "29929",
+										"3": "4471",
+										"4": "i use it once in a while when i'm in my ring."
+									},
+									{
+										"0": "30316",
+										"1": "2638",
+										"2": "30316",
+										"3": "2638",
+										"4": "This Credit Card Account works so well. It delightedly improves my football by a lot."
+									},
+									{
+										"0": "30770",
+										"1": "1188",
+										"2": "30770",
+										"3": "1188",
+										"4": "I tried to hang it but got jelly bean all over it."
+									},
+									{
+										"0": "30854",
+										"1": "236",
+										"2": "30854",
+										"3": "236",
+										"4": "The box this comes in is 4 yard by 5 inch and weights 12 pound!"
+									},
+									{
+										"0": "31273",
+										"1": "3544",
+										"2": "31273",
+										"3": "3544",
+										"4": "I saw one of these in Barbados and I bought one."
+									},
+									{
+										"0": "31958",
+										"1": "4916",
+										"2": "31958",
+										"3": "4916",
+										"4": "This Analyst works too well. It buoyantly improves my football by a lot."
+									},
+									{
+										"0": "31992",
+										"1": "3988",
+										"2": "31992",
+										"3": "3988",
+										"4": "The box this comes in is 3 yard by 6 yard and weights 19 pound!!!"
+									},
+									{
+										"0": "32955",
+										"1": "2207",
+										"2": "32955",
+										"3": "2207",
+										"4": "I saw one of these in Finland and I bought one."
+									},
+									{
+										"0": "33017",
+										"1": "1727",
+										"2": "33017",
+										"3": "1727",
+										"4": "It only works when I'm Martinique."
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "productId",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "userId",
+										"type": "bigint"
+									},
+									{
+										"key": "3",
+										"name": "productId",
+										"type": "bigint"
+									},
+									{
+										"key": "4",
+										"name": "reviewText",
+										"type": "string"
+									}
+								],
+								"truncated": false
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/fbfcdd32-da9a-480c-b5c3-1b5d0c6d797c/resourceGroups/data-engineering-synapse-noxqrm6/providers/Microsoft.Synapse/workspaces/asaworkspacenoxqrm6/bigDataPools/SparkPool01",
+				"name": "SparkPool01",
+				"type": "Spark",
+				"endpoint": "https://asaworkspacenoxqrm6.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SparkPool01",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			}
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"metadata": {
+					"collapsed": false
+				},
+				"source": [
+					"# Read from Cosmos DB analytical store into a Spark DataFrame and display 10 rows from the DataFrame\n",
+					"# To select a preferred list of regions in a multi-region Cosmos DB account, add .option(\"spark.cosmos.preferredRegions\", \"<Region1>,<Region2>\")\n",
+					"\n",
+					"df = spark.read\\\n",
+					"    .format(\"cosmos.olap\")\\\n",
+					"    .option(\"spark.synapse.linkedService\", \"asacosmosdb01\")\\\n",
+					"    .option(\"spark.cosmos.container\", \"UserProfileHTAP\")\\\n",
+					"    .load()\n",
+					"\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"df = spark.read\\\r\n",
+					"    .format(\"cosmos.oltp\")\\\r\n",
+					"    .option(\"spark.synapse.linkedService\", \"asacosmosdb01\")\\\r\n",
+					"    .option(\"spark.cosmos.container\", \"UserProfileHTAP\")\\\r\n",
+					"    .load()\r\n",
+					"\r\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Read from Cosmos DB analytical store into a Spark DataFrame and display 10 rows from the DataFrame\r\n",
+					"# To select a preferred list of regions in a multi-region Cosmos DB account, add .option(\"spark.cosmos.preferredRegions\", \"<Region1>,<Region2>\")\r\n",
+					"\r\n",
+					"df = spark.read\\\r\n",
+					"    .format(\"cosmos.olap\")\\\r\n",
+					"    .option(\"spark.synapse.linkedService\", \"asacosmosdb01\")\\\r\n",
+					"    .option(\"spark.cosmos.container\", \"UserProfileHTAP\")\\\r\n",
+					"    .load()\r\n",
+					"\r\n",
+					"display(df.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"unwanted_cols = {'_attachments','_etag','_rid','_self','_ts','collectionType','id'}\r\n",
+					"\r\n",
+					"# Remove unwanted columns from the columns collection\r\n",
+					"cols = list(set(df.columns) - unwanted_cols)\r\n",
+					"\r\n",
+					"profiles = df.select(cols)\r\n",
+					"\r\n",
+					"display(profiles.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"profiles.count()"
+				],
+				"attachments": null,
+				"execution_count": 5
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"from pyspark.sql.functions import udf, explode\r\n",
+					"\r\n",
+					"preferredProductsFlat=profiles.select('userId',explode('preferredProducts').alias('productId'))\r\n",
+					"productReviewsFlat=profiles.select('userId',explode('productReviews').alias('productReviews'))\r\n",
+					"display(productReviewsFlat.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 6
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"display(preferredProductsFlat.limit(20))"
+				],
+				"attachments": null,
+				"execution_count": 7
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"productReviews = (productReviewsFlat.select('userId','productReviews.productId','productReviews.reviewText')\r\n",
+					"    .orderBy('userId'))\r\n",
+					"\r\n",
+					"display(productReviews.limit(10))"
+				],
+				"attachments": null,
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"preferredProductReviews = (preferredProductsFlat.join(productReviews,\r\n",
+					"    (preferredProductsFlat.userId == productReviews.userId) &\r\n",
+					"    (preferredProductsFlat.productId == productReviews.productId))\r\n",
+					")\r\n",
+					"\r\n",
+					"display(preferredProductReviews.limit(100))"
+				],
+				"attachments": null,
+				"execution_count": 9
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				],
+				"attachments": null,
+				"execution_count": null
+			}
+		]
+	}
+}

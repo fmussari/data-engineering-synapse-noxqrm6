@@ -1,0 +1,1289 @@
+{
+	"name": "Mod19-4-exercise-load-data-spark-dataframe",
+	"properties": {
+		"folder": {
+			"name": "30 Days Collection"
+		},
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "SparkPool01",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "e93f58ed-fbca-4554-8dbf-ac87816dd374"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1",
+				"state": {
+					"5b3deec5-1c25-4d86-ac25-7b239e9f615a": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "101795",
+										"1": "2842",
+										"2": "1"
+									},
+									{
+										"0": "102738",
+										"1": "4213",
+										"2": "1"
+									},
+									{
+										"0": "101820",
+										"1": "1860",
+										"2": "1"
+									},
+									{
+										"0": "101007",
+										"1": "4395",
+										"2": "1"
+									},
+									{
+										"0": "101831",
+										"1": "1404",
+										"2": "1"
+									},
+									{
+										"0": "101038",
+										"1": "1962",
+										"2": "1"
+									},
+									{
+										"0": "101835",
+										"1": "2703",
+										"2": "1"
+									},
+									{
+										"0": "101034",
+										"1": "3840",
+										"2": "1"
+									},
+									{
+										"0": "101835",
+										"1": "1677",
+										"2": "1"
+									},
+									{
+										"0": "101045",
+										"1": "2693",
+										"2": "1"
+									},
+									{
+										"0": "101838",
+										"1": "2981",
+										"2": "1"
+									},
+									{
+										"0": "101060",
+										"1": "1853",
+										"2": "1"
+									},
+									{
+										"0": "101842",
+										"1": "826",
+										"2": "1"
+									},
+									{
+										"0": "101083",
+										"1": "4415",
+										"2": "1"
+									},
+									{
+										"0": "101858",
+										"1": "3274",
+										"2": "1"
+									},
+									{
+										"0": "101121",
+										"1": "4989",
+										"2": "1"
+									},
+									{
+										"0": "101859",
+										"1": "1412",
+										"2": "1"
+									},
+									{
+										"0": "101143",
+										"1": "4040",
+										"2": "1"
+									},
+									{
+										"0": "101865",
+										"1": "2207",
+										"2": "1"
+									},
+									{
+										"0": "101157",
+										"1": "4247",
+										"2": "1"
+									},
+									{
+										"0": "101876",
+										"1": "4026",
+										"2": "1"
+									},
+									{
+										"0": "101177",
+										"1": "1895",
+										"2": "1"
+									},
+									{
+										"0": "101878",
+										"1": "937",
+										"2": "1"
+									},
+									{
+										"0": "101185",
+										"1": "383",
+										"2": "1"
+									},
+									{
+										"0": "101890",
+										"1": "2764",
+										"2": "1"
+									},
+									{
+										"0": "101225",
+										"1": "1853",
+										"2": "1"
+									},
+									{
+										"0": "101890",
+										"1": "3262",
+										"2": "1"
+									},
+									{
+										"0": "101242",
+										"1": "4440",
+										"2": "1"
+									},
+									{
+										"0": "101901",
+										"1": "2511",
+										"2": "1"
+									},
+									{
+										"0": "101269",
+										"1": "2277",
+										"2": "1"
+									},
+									{
+										"0": "101901",
+										"1": "3302",
+										"2": "1"
+									},
+									{
+										"0": "101288",
+										"1": "4723",
+										"2": "1"
+									},
+									{
+										"0": "101910",
+										"1": "168",
+										"2": "1"
+									},
+									{
+										"0": "101297",
+										"1": "1737",
+										"2": "1"
+									},
+									{
+										"0": "101912",
+										"1": "1876",
+										"2": "1"
+									},
+									{
+										"0": "101327",
+										"1": "644",
+										"2": "1"
+									},
+									{
+										"0": "101923",
+										"1": "4198",
+										"2": "1"
+									},
+									{
+										"0": "101790",
+										"1": "1467",
+										"2": "1"
+									},
+									{
+										"0": "101935",
+										"1": "4056",
+										"2": "1"
+									},
+									{
+										"0": "101359",
+										"1": "1384",
+										"2": "1"
+									},
+									{
+										"0": "101938",
+										"1": "3473",
+										"2": "1"
+									},
+									{
+										"0": "101383",
+										"1": "2217",
+										"2": "1"
+									},
+									{
+										"0": "101951",
+										"1": "431",
+										"2": "1"
+									},
+									{
+										"0": "101412",
+										"1": "3287",
+										"2": "1"
+									},
+									{
+										"0": "101965",
+										"1": "1153",
+										"2": "1"
+									},
+									{
+										"0": "101438",
+										"1": "2392",
+										"2": "1"
+									},
+									{
+										"0": "101983",
+										"1": "66",
+										"2": "1"
+									},
+									{
+										"0": "101466",
+										"1": "4630",
+										"2": "1"
+									},
+									{
+										"0": "102006",
+										"1": "3884",
+										"2": "1"
+									},
+									{
+										"0": "101499",
+										"1": "932",
+										"2": "1"
+									},
+									{
+										"0": "102031",
+										"1": "2984",
+										"2": "1"
+									},
+									{
+										"0": "101519",
+										"1": "2718",
+										"2": "1"
+									},
+									{
+										"0": "102038",
+										"1": "3384",
+										"2": "1"
+									},
+									{
+										"0": "101552",
+										"1": "1113",
+										"2": "1"
+									},
+									{
+										"0": "102062",
+										"1": "1143",
+										"2": "1"
+									},
+									{
+										"0": "101560",
+										"1": "1452",
+										"2": "1"
+									},
+									{
+										"0": "102079",
+										"1": "4449",
+										"2": "1"
+									},
+									{
+										"0": "101572",
+										"1": "1330",
+										"2": "1"
+									},
+									{
+										"0": "102096",
+										"1": "4955",
+										"2": "1"
+									},
+									{
+										"0": "101585",
+										"1": "3317",
+										"2": "1"
+									},
+									{
+										"0": "102096",
+										"1": "4936",
+										"2": "1"
+									},
+									{
+										"0": "101587",
+										"1": "3663",
+										"2": "1"
+									},
+									{
+										"0": "102105",
+										"1": "3171",
+										"2": "1"
+									},
+									{
+										"0": "101592",
+										"1": "1286",
+										"2": "1"
+									},
+									{
+										"0": "102112",
+										"1": "2916",
+										"2": "1"
+									},
+									{
+										"0": "101619",
+										"1": "1982",
+										"2": "1"
+									},
+									{
+										"0": "102120",
+										"1": "4255",
+										"2": "1"
+									},
+									{
+										"0": "101624",
+										"1": "2126",
+										"2": "1"
+									},
+									{
+										"0": "102120",
+										"1": "543",
+										"2": "1"
+									},
+									{
+										"0": "101658",
+										"1": "606",
+										"2": "1"
+									},
+									{
+										"0": "102138",
+										"1": "1937",
+										"2": "1"
+									},
+									{
+										"0": "101684",
+										"1": "82",
+										"2": "1"
+									},
+									{
+										"0": "102144",
+										"1": "4990",
+										"2": "1"
+									},
+									{
+										"0": "101696",
+										"1": "437",
+										"2": "1"
+									},
+									{
+										"0": "102158",
+										"1": "3430",
+										"2": "1"
+									},
+									{
+										"0": "101712",
+										"1": "4114",
+										"2": "1"
+									},
+									{
+										"0": "102180",
+										"1": "819",
+										"2": "1"
+									},
+									{
+										"0": "101721",
+										"1": "1356",
+										"2": "1"
+									},
+									{
+										"0": "102204",
+										"1": "697",
+										"2": "1"
+									},
+									{
+										"0": "101726",
+										"1": "105",
+										"2": "1"
+									},
+									{
+										"0": "102206",
+										"1": "986",
+										"2": "1"
+									},
+									{
+										"0": "101759",
+										"1": "796",
+										"2": "1"
+									},
+									{
+										"0": "102212",
+										"1": "1165",
+										"2": "1"
+									},
+									{
+										"0": "101789",
+										"1": "4732",
+										"2": "1"
+									},
+									{
+										"0": "102228",
+										"1": "3509",
+										"2": "1"
+									},
+									{
+										"0": "102311",
+										"1": "536",
+										"2": "1"
+									},
+									{
+										"0": "102333",
+										"1": "3924",
+										"2": "1"
+									},
+									{
+										"0": "101003",
+										"1": "1823",
+										"2": "1"
+									},
+									{
+										"0": "102334",
+										"1": "4714",
+										"2": "1"
+									},
+									{
+										"0": "101031",
+										"1": "4784",
+										"2": "1"
+									},
+									{
+										"0": "102335",
+										"1": "4322",
+										"2": "1"
+									},
+									{
+										"0": "101051",
+										"1": "3236",
+										"2": "1"
+									},
+									{
+										"0": "102344",
+										"1": "2944",
+										"2": "1"
+									},
+									{
+										"0": "101096",
+										"1": "2361",
+										"2": "1"
+									},
+									{
+										"0": "102364",
+										"1": "2850",
+										"2": "1"
+									},
+									{
+										"0": "101339",
+										"1": "3863",
+										"2": "1"
+									},
+									{
+										"0": "102364",
+										"1": "4526",
+										"2": "1"
+									},
+									{
+										"0": "101184",
+										"1": "512",
+										"2": "1"
+									},
+									{
+										"0": "102367",
+										"1": "217",
+										"2": "1"
+									},
+									{
+										"0": "101230",
+										"1": "4447",
+										"2": "1"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "visitorId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "productId",
+										"type": "bigint"
+									},
+									{
+										"key": "2",
+										"name": "itemsPurchasedLast12Months",
+										"type": "bigint"
+									}
+								]
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					},
+					"a7b9f10a-8e74-497e-ace7-1484e21a9204": {
+						"type": "Synapse.DataFrame",
+						"sync_state": {
+							"table": {
+								"rows": [
+									{
+										"0": "80000",
+										"1": "20"
+									},
+									{
+										"0": "80001",
+										"1": "20"
+									},
+									{
+										"0": "80002",
+										"1": "15"
+									},
+									{
+										"0": "80003",
+										"1": "12"
+									},
+									{
+										"0": "80004",
+										"1": "10"
+									},
+									{
+										"0": "80005",
+										"1": "13"
+									},
+									{
+										"0": "80006",
+										"1": "6"
+									},
+									{
+										"0": "80007",
+										"1": "18"
+									},
+									{
+										"0": "80008",
+										"1": "4"
+									},
+									{
+										"0": "80009",
+										"1": "16"
+									},
+									{
+										"0": "80010",
+										"1": "3"
+									},
+									{
+										"0": "80011",
+										"1": "17"
+									},
+									{
+										"0": "80012",
+										"1": "19"
+									},
+									{
+										"0": "80013",
+										"1": "6"
+									},
+									{
+										"0": "80014",
+										"1": "20"
+									},
+									{
+										"0": "80015",
+										"1": "12"
+									},
+									{
+										"0": "80016",
+										"1": "6"
+									},
+									{
+										"0": "80017",
+										"1": "1"
+									},
+									{
+										"0": "80018",
+										"1": "17"
+									},
+									{
+										"0": "80019",
+										"1": "14"
+									},
+									{
+										"0": "80020",
+										"1": "9"
+									},
+									{
+										"0": "80021",
+										"1": "18"
+									},
+									{
+										"0": "80022",
+										"1": "13"
+									},
+									{
+										"0": "80023",
+										"1": "10"
+									},
+									{
+										"0": "80024",
+										"1": "4"
+									},
+									{
+										"0": "80025",
+										"1": "13"
+									},
+									{
+										"0": "80026",
+										"1": "19"
+									},
+									{
+										"0": "80027",
+										"1": "13"
+									},
+									{
+										"0": "80028",
+										"1": "1"
+									},
+									{
+										"0": "80029",
+										"1": "4"
+									},
+									{
+										"0": "80030",
+										"1": "1"
+									},
+									{
+										"0": "80031",
+										"1": "9"
+									},
+									{
+										"0": "80032",
+										"1": "17"
+									},
+									{
+										"0": "80033",
+										"1": "8"
+									},
+									{
+										"0": "80034",
+										"1": "14"
+									},
+									{
+										"0": "80035",
+										"1": "11"
+									},
+									{
+										"0": "80036",
+										"1": "19"
+									},
+									{
+										"0": "80037",
+										"1": "10"
+									},
+									{
+										"0": "80038",
+										"1": "3"
+									},
+									{
+										"0": "80039",
+										"1": "4"
+									},
+									{
+										"0": "80040",
+										"1": "17"
+									},
+									{
+										"0": "80041",
+										"1": "6"
+									},
+									{
+										"0": "80042",
+										"1": "9"
+									},
+									{
+										"0": "80043",
+										"1": "2"
+									},
+									{
+										"0": "80044",
+										"1": "19"
+									},
+									{
+										"0": "80045",
+										"1": "6"
+									},
+									{
+										"0": "80046",
+										"1": "17"
+									},
+									{
+										"0": "80047",
+										"1": "4"
+									},
+									{
+										"0": "80048",
+										"1": "13"
+									},
+									{
+										"0": "80049",
+										"1": "16"
+									},
+									{
+										"0": "80050",
+										"1": "5"
+									},
+									{
+										"0": "80051",
+										"1": "17"
+									},
+									{
+										"0": "80052",
+										"1": "9"
+									},
+									{
+										"0": "80053",
+										"1": "4"
+									},
+									{
+										"0": "80054",
+										"1": "10"
+									},
+									{
+										"0": "80055",
+										"1": "18"
+									},
+									{
+										"0": "80056",
+										"1": "13"
+									},
+									{
+										"0": "80057",
+										"1": "9"
+									},
+									{
+										"0": "80058",
+										"1": "3"
+									},
+									{
+										"0": "80059",
+										"1": "14"
+									},
+									{
+										"0": "80060",
+										"1": "4"
+									},
+									{
+										"0": "80061",
+										"1": "6"
+									},
+									{
+										"0": "80062",
+										"1": "19"
+									},
+									{
+										"0": "80063",
+										"1": "3"
+									},
+									{
+										"0": "80064",
+										"1": "3"
+									},
+									{
+										"0": "80066",
+										"1": "4"
+									},
+									{
+										"0": "80067",
+										"1": "6"
+									},
+									{
+										"0": "80068",
+										"1": "5"
+									},
+									{
+										"0": "80069",
+										"1": "11"
+									},
+									{
+										"0": "80070",
+										"1": "8"
+									},
+									{
+										"0": "80071",
+										"1": "8"
+									},
+									{
+										"0": "80072",
+										"1": "5"
+									},
+									{
+										"0": "80073",
+										"1": "14"
+									},
+									{
+										"0": "80074",
+										"1": "12"
+									},
+									{
+										"0": "80075",
+										"1": "7"
+									},
+									{
+										"0": "80076",
+										"1": "12"
+									},
+									{
+										"0": "80077",
+										"1": "1"
+									},
+									{
+										"0": "80078",
+										"1": "6"
+									},
+									{
+										"0": "80079",
+										"1": "4"
+									},
+									{
+										"0": "80080",
+										"1": "19"
+									},
+									{
+										"0": "80081",
+										"1": "14"
+									},
+									{
+										"0": "80082",
+										"1": "15"
+									},
+									{
+										"0": "80083",
+										"1": "12"
+									},
+									{
+										"0": "80084",
+										"1": "5"
+									},
+									{
+										"0": "80086",
+										"1": "7"
+									},
+									{
+										"0": "80087",
+										"1": "1"
+									},
+									{
+										"0": "80088",
+										"1": "2"
+									},
+									{
+										"0": "80089",
+										"1": "9"
+									},
+									{
+										"0": "80090",
+										"1": "1"
+									},
+									{
+										"0": "80091",
+										"1": "10"
+									},
+									{
+										"0": "80092",
+										"1": "11"
+									},
+									{
+										"0": "80093",
+										"1": "6"
+									},
+									{
+										"0": "80094",
+										"1": "19"
+									},
+									{
+										"0": "80095",
+										"1": "1"
+									},
+									{
+										"0": "80096",
+										"1": "19"
+									},
+									{
+										"0": "80097",
+										"1": "19"
+									},
+									{
+										"0": "80098",
+										"1": "15"
+									},
+									{
+										"0": "80099",
+										"1": "8"
+									},
+									{
+										"0": "80100",
+										"1": "11"
+									},
+									{
+										"0": "80101",
+										"1": "6"
+									}
+								],
+								"schema": [
+									{
+										"key": "0",
+										"name": "visitorId",
+										"type": "bigint"
+									},
+									{
+										"key": "1",
+										"name": "total",
+										"type": "bigint"
+									}
+								]
+							},
+							"isSummary": false,
+							"language": "scala"
+						},
+						"persist_state": {
+							"view": {
+								"type": "details",
+								"chartOptions": {
+									"chartType": "bar",
+									"aggregationType": "sum",
+									"categoryFieldKeys": [
+										"1"
+									],
+									"seriesFieldKeys": [
+										"0"
+									],
+									"isStacked": false
+								}
+							}
+						}
+					}
+				}
+			},
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/fbfcdd32-da9a-480c-b5c3-1b5d0c6d797c/resourceGroups/data-engineering-synapse-noxqrm6/providers/Microsoft.Synapse/workspaces/asaworkspacenoxqrm6/bigDataPools/SparkPool01",
+				"name": "SparkPool01",
+				"type": "Spark",
+				"endpoint": "https://asaworkspacenoxqrm6.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/SparkPool01",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			}
+		},
+		"cells": [
+			{
+				"cell_type": "markdown",
+				"metadata": {
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"## Exercise: Load data into a spark dataframe\r\n",
+					"https://docs.microsoft.com/en-us/learn/modules/transform-data-with-dataframes-apache-spark-pools-azure-synapse-analytics/4-exercise-load-data-spark-dataframe"
+				],
+				"attachments": null
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"datalake = 'asadatalakenoxqrm6'"
+				],
+				"attachments": null,
+				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df = (spark.read \\\r\n",
+					"        .option('inferSchema', 'true') \\\r\n",
+					"        .json('abfss://wwi-02@' + datalake + '.dfs.core.windows.net/online-user-profiles-02/*.json', multiLine=True)\r\n",
+					"    )\r\n",
+					"\r\n",
+					"df.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"# create a view called user_profiles\r\n",
+					"df.createOrReplaceTempView(\"user_profiles\")"
+				],
+				"attachments": null,
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"microsoft": {
+						"language": "sparksql"
+					},
+					"collapsed": false
+				},
+				"source": [
+					"%%sql\r\n",
+					"\r\n",
+					"SELECT * FROM user_profiles LIMIT 10"
+				],
+				"attachments": null,
+				"execution_count": 4
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"df.printSchema()"
+				],
+				"attachments": null,
+				"execution_count": 8
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"from pyspark.sql.functions import udf, explode\r\n",
+					"\r\n",
+					"flat=df.select('visitorId',explode('topProductPurchases').alias('topProductPurchases_flat'))\r\n",
+					"flat.show(100)"
+				],
+				"attachments": null,
+				"execution_count": 12
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"topPurchases = (flat.select('visitorId','topProductPurchases_flat.productId','topProductPurchases_flat.itemsPurchasedLast12Months')\r\n",
+					"    .orderBy('visitorId'))\r\n",
+					"\r\n",
+					"topPurchases.show(100)"
+				],
+				"attachments": null,
+				"execution_count": 13
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"# Let's order by the number of items purchased in the last 12 months\r\n",
+					"sortedTopPurchases = topPurchases.orderBy(\"itemsPurchasedLast12Months\")\r\n",
+					"\r\n",
+					"display(sortedTopPurchases.limit(100))"
+				],
+				"attachments": null,
+				"execution_count": 14
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					},
+					"collapsed": false
+				},
+				"source": [
+					"groupedTopPurchases = (sortedTopPurchases.select(\"visitorId\")\r\n",
+					"    .groupBy(\"visitorId\")\r\n",
+					"    .agg(count(\"*\").alias(\"total\"))\r\n",
+					"    .orderBy(\"visitorId\") )\r\n",
+					"\r\n",
+					"display(groupedTopPurchases.limit(100))"
+				],
+				"attachments": null,
+				"execution_count": 15
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					"groupedTopPurchases = (sortedTopPurchases.select(\"visitorId\",\"itemsPurchasedLast12Months\")\r\n",
+					"    .groupBy(\"visitorId\")\r\n",
+					"    .agg(sum(\"itemsPurchasedLast12Months\").alias(\"totalItemsPurchased\"))\r\n",
+					"    .orderBy(\"visitorId\") )\r\n",
+					"\r\n",
+					"groupedTopPurchases.show(100)"
+				],
+				"attachments": null,
+				"execution_count": 16
+			},
+			{
+				"cell_type": "code",
+				"metadata": {
+					"jupyter": {
+						"source_hidden": false,
+						"outputs_hidden": false
+					},
+					"nteract": {
+						"transient": {
+							"deleting": false
+						}
+					}
+				},
+				"source": [
+					""
+				],
+				"attachments": null,
+				"execution_count": null
+			}
+		]
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 2",
+	"properties": {
+		"content": {
+			"query": "-- This is auto-generated code\nSELECT\n    TOP 100 *\nFROM\n    OPENROWSET(\n        BULK 'https://asadatalakenoxqrm6.dfs.core.windows.net/tempdata/test_CosmosAparte/',\n        FORMAT = 'DELTA'\n    ) AS [result]\n\n\n-- This is auto-generated code\nSELECT\n    COUNT (*)\nFROM\n    OPENROWSET(\n        BULK 'https://asadatalakenoxqrm6.dfs.core.windows.net/tempdata/test_CosmosAparte/',\n        FORMAT = 'DELTA'\n    ) AS [result]\n-- 510,930\nWHERE userId is NULL\n-- 343,016\n\n-- Lo mismo, pareciera que el FLATTEN genera los NULLS\n\n-- Listo, 0 nulos luegos de modificar el dataflow -- short a integer los ids.",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}
